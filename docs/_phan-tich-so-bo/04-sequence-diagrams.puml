@@ -1,0 +1,72 @@
+@startuml UC4_LamBaiKiemTra
+title UC4 — Làm bài kiểm tra & xem điểm (Template Method + Strategy)
+actor "Học viên" as HV
+boundary "quiz_attempt view" as View
+participant "QuizAttemptService\n(Template Method)" as TM
+participant "GradingStrategy\n(Strategy)" as ST
+database "DB" as DB
+
+HV -> View : POST nộp bài (chọn đáp án)
+View -> TM : get_attempt_service(quiz).submit(attempt, answers)
+activate TM
+TM -> TM : validate_can_submit(attempt)
+note right: hook riêng theo loại quiz\n(Timed / Untimed)
+loop mỗi Question trong Quiz
+  TM -> ST : get_grading_strategy(type).grade(question, choice)
+  activate ST
+  ST --> TM : (is_correct, points)
+  deactivate ST
+  TM -> DB : lưu Answer
+end
+TM -> TM : finalize_score(total, possible)
+TM -> DB : lưu QuizAttempt.score
+deactivate TM
+TM --> View : attempt đã chấm
+View --> HV : redirect trang kết quả
+@enduml
+
+@startuml UC6_TaoDeKiemTra
+title UC6 — Tạo đề kiểm tra (Factory Method)
+actor "Giảng viên" as GV
+boundary "quiz_manage view" as View
+participant "QuestionFactory" as Factory
+participant "MultipleChoiceQuestionCreator /\nTrueFalseQuestionCreator" as Creator
+database "DB" as DB
+
+GV -> View : chọn loại câu hỏi + nhập nội dung/lựa chọn
+View -> Factory : create_question(question_type, quiz, text, ...)
+activate Factory
+Factory -> Factory : chọn creator theo question_type
+Factory -> Creator : create(quiz, text, order, points, ...)
+activate Creator
+Creator -> DB : tạo Question
+Creator -> DB : tạo các Choice tương ứng
+Creator --> Factory : Question
+deactivate Creator
+Factory --> View : Question
+deactivate Factory
+View --> GV : hiển thị câu hỏi vừa thêm
+@enduml
+
+@startuml UC5_ThongBaoBaiGiangMoi
+title UC5 (phần thông báo) — Observer pattern
+actor "Giảng viên" as GV
+boundary "lecture_create view" as View
+participant "Django signal\n(post_save Lecture)" as Signal
+participant "CourseSubject\n(Subject)" as Subject
+participant "EnrolledStudentsNotifier\n(Observer)" as Observer
+database "DB" as DB
+
+GV -> View : thêm bài giảng mới
+View -> DB : tạo Lecture
+DB -> Signal : post_save(Lecture, created=True)
+Signal -> Subject : notify('NEW_LECTURE', {course, message})
+activate Subject
+Subject -> Observer : update(subject, event_type, payload)
+activate Observer
+Observer -> DB : lấy danh sách Enrollment.student của course
+Observer -> DB : bulk_create Notification cho từng học viên
+deactivate Observer
+deactivate Subject
+View --> GV : "Đã thêm bài giảng — học viên đã được thông báo"
+@enduml

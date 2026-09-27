@@ -1,0 +1,147 @@
+@startuml ClassDiagram
+skinparam classAttributeIconSize 0
+
+class User {
+  +username
+  +email
+  +role : Role {STUDENT, INSTRUCTOR, ADMIN}
+}
+
+class Category {
+  +name
+  +description
+}
+
+class Course {
+  +title
+  +description
+  +is_published
+}
+
+class Lecture {
+  +title
+  +content_type
+  +video_url
+  +document
+  +order
+}
+
+class Enrollment {
+  +enrolled_at
+}
+
+class LectureProgress {
+  +is_completed
+  +completed_at
+}
+
+class Notification {
+  +message
+  +is_read
+}
+
+class Quiz {
+  +title
+  +time_limit_minutes
+  +due_date
+  +total_points()
+}
+
+class Question {
+  +question_type
+  +text
+  +points
+}
+
+class Choice {
+  +text
+  +is_correct
+}
+
+class QuizAttempt {
+  +started_at
+  +submitted_at
+  +score
+}
+
+class Answer {
+  +is_correct
+  +points_awarded
+}
+
+User "1" -- "*" Course : instructor >
+User "1" -- "*" Enrollment : student >
+Course "1" -- "*" Enrollment
+Course "1" -- "*" Lecture
+Course "1" -- "*" Quiz
+Course "*" -- "1" Category
+Lecture "1" -- "*" LectureProgress
+User "1" -- "*" LectureProgress : student >
+User "1" -- "*" Notification : recipient >
+Quiz "1" -- "*" Question
+Question "1" -- "*" Choice
+Quiz "1" -- "*" QuizAttempt
+User "1" -- "*" QuizAttempt : student >
+QuizAttempt "1" -- "*" Answer
+Question "1" -- "*" Answer
+Choice "1" -- "0..1" Answer : selected_choice >
+
+' ---------------- Design patterns ----------------
+
+package "Factory Method (quizzes/patterns.py)" {
+  abstract class QuestionCreator {
+    +{abstract} create(quiz, text, order, points, **kwargs) : Question
+  }
+  class MultipleChoiceQuestionCreator
+  class TrueFalseQuestionCreator
+  class QuestionFactory {
+    +{static} create_question(question_type, **kwargs) : Question
+  }
+  QuestionCreator <|.. MultipleChoiceQuestionCreator
+  QuestionCreator <|.. TrueFalseQuestionCreator
+  QuestionFactory ..> QuestionCreator : delegates to
+  QuestionFactory ..> Question : creates
+}
+
+package "Strategy (quizzes/grading.py)" {
+  abstract class GradingStrategy {
+    +{abstract} grade(question, selected_choice)
+  }
+  class ChoiceBasedGradingStrategy
+  GradingStrategy <|.. ChoiceBasedGradingStrategy
+}
+
+package "Template Method (quizzes/services.py)" {
+  abstract class QuizAttemptService {
+    +submit(attempt, answers) : QuizAttempt
+    +{abstract} validate_can_submit(attempt)
+    +finalize_score(awarded, possible)
+  }
+  class TimedQuizAttemptService
+  class UntimedQuizAttemptService
+  QuizAttemptService <|-- TimedQuizAttemptService
+  QuizAttemptService <|-- UntimedQuizAttemptService
+  QuizAttemptService ..> GradingStrategy : uses per question
+}
+
+package "Observer (courses/observers.py)" {
+  abstract class Observer {
+    +{abstract} update(subject, event_type, payload)
+  }
+  class Subject {
+    -observers : list
+    +attach(observer)
+    +detach(observer)
+    +notify(event_type, payload)
+  }
+  class EnrolledStudentsNotifier
+  class CourseSubject
+  Observer <|.. EnrolledStudentsNotifier
+  Subject <|-- CourseSubject
+  CourseSubject o-- Observer : observers
+  EnrolledStudentsNotifier ..> Notification : creates
+}
+
+QuestionFactory --> Question
+Answer ..> GradingStrategy : graded by
+@enduml

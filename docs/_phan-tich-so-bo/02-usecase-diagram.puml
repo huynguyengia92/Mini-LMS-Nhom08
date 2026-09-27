@@ -1,0 +1,36 @@
+@startuml UseCaseDiagram
+left to right direction
+actor "Học viên" as HV
+actor "Giảng viên" as GV
+actor "Quản trị viên" as QT
+
+rectangle "Mini-LMS" {
+  usecase "UC1. Đăng ký/Đăng nhập" as UC1
+  usecase "UC2. Tìm kiếm & đăng ký khóa học" as UC2
+  usecase "UC3. Xem bài giảng" as UC3
+  usecase "UC4. Làm bài kiểm tra & xem điểm" as UC4
+  usecase "UC5. Tạo & quản lý khóa học" as UC5
+  usecase "UC6. Tạo đề kiểm tra" as UC6
+  usecase "UC7. Theo dõi tiến độ học tập" as UC7
+  usecase "UC8. Quản lý danh mục khóa học" as UC8
+}
+
+HV --> UC1
+GV --> UC1
+QT --> UC1
+
+HV --> UC2
+HV --> UC3
+HV --> UC4
+HV --> UC7
+
+GV --> UC5
+GV --> UC6
+
+QT --> UC8
+
+UC3 ..> UC7 : <<extend>>
+UC4 ..> UC7 : <<extend>>
+UC6 ..> UC5 : <<include>>
+UC2 ..> UC3 : <<include>>
+@enduml

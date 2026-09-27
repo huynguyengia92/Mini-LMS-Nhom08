@@ -1,0 +1,141 @@
+﻿Summary,Issue Type,Description,Priority,Story Points,Sprint,Labels,Component
+US.01 — Đăng ký tài khoản (chọn vai trò Học viên/Giảng viên) để có thể sử dụng hệ thống (F.1.1),Story,"Là Khách (chưa đăng nhập), tôi muốn đăng ký tài khoản (chọn vai trò Học viên/Giảng viên) để có thể sử dụng hệ thống (F.1.1)
+
+Module: Tài khoản
+Mã yêu cầu trong tài liệu SEP: US.01",High,5,Sprint 1,tai-khoan,Tài khoản
+US.02 — Đăng nhập bằng username/mật khẩu để truy cập các chức năng theo vai trò của mình (F.1.2),Story,"Là người dùng đã có tài khoản, tôi muốn đăng nhập bằng username/mật khẩu để truy cập các chức năng theo vai trò của mình (F.1.2)
+
+Module: Tài khoản
+Mã yêu cầu trong tài liệu SEP: US.02",High,5,Sprint 1,tai-khoan,Tài khoản
+US.03 — Đăng xuất để bảo mật phiên làm việc của mình (F.1.3),Story,"Là người dùng đang đăng nhập, tôi muốn đăng xuất để bảo mật phiên làm việc của mình (F.1.3)
+
+Module: Tài khoản
+Mã yêu cầu trong tài liệu SEP: US.03",Medium,2,Sprint 1,tai-khoan,Tài khoản
+"US.04 — Tìm kiếm và xem chi tiết khóa học (mô tả, danh sách bài giảng, bài kiểm tra)",Story,"Là Học viên, tôi muốn tìm kiếm và xem chi tiết khóa học (mô tả, danh sách bài giảng, bài kiểm tra) để chọn khóa học phù hợp (F.2.1, F.2.2)
+
+Module: Khóa học
+Mã yêu cầu trong tài liệu SEP: US.04",High,8,Sprint 1,khoa-hoc,Khóa học
+US.05 — Đăng ký khóa học đã xuất bản để bắt đầu học (F.2.3),Story,"Là Học viên, tôi muốn đăng ký khóa học đã xuất bản để bắt đầu học (F.2.3)
+
+Module: Khóa học
+Mã yêu cầu trong tài liệu SEP: US.05",High,5,Sprint 1,khoa-hoc,Khóa học
+"US.06 — Tạo, sửa, xóa khóa học của mình để quản lý nội dung giảng dạy (F.2.4, F.2.5, F.2.6)",Story,"Là Giảng viên, tôi muốn tạo, sửa, xóa khóa học của mình để quản lý nội dung giảng dạy (F.2.4, F.2.5, F.2.6)
+
+Module: Khóa học
+Mã yêu cầu trong tài liệu SEP: US.06",High,13,Sprint 1,khoa-hoc,Khóa học
+"US.07 — Thêm, sửa, xóa bài giảng (video/tài liệu) trong khóa học của mình",Story,"Là Giảng viên, tôi muốn thêm, sửa, xóa bài giảng (video/tài liệu) trong khóa học của mình để cung cấp nội dung học (F.2.7, F.2.8, F.2.9)
+
+Module: Khóa học
+Mã yêu cầu trong tài liệu SEP: US.07",High,13,Sprint 1,khoa-hoc,Khóa học
+US.08 — Xem nội dung bài giảng (video/tài liệu) để học kiến thức (F.2.10),Story,"Là Học viên đã đăng ký, tôi muốn xem nội dung bài giảng (video/tài liệu) để học kiến thức (F.2.10)
+
+Module: Khóa học
+Mã yêu cầu trong tài liệu SEP: US.08",High,5,Sprint 1,khoa-hoc,Khóa học
+US.09 — Đánh dấu hoàn thành từng bài giảng để hệ thống ghi nhận tiến độ học tập của tôi (F.2.11),Story,"Là Học viên, tôi muốn đánh dấu hoàn thành từng bài giảng để hệ thống ghi nhận tiến độ học tập của tôi (F.2.11)
+
+Module: Khóa học
+Mã yêu cầu trong tài liệu SEP: US.09",High,5,Sprint 1,khoa-hoc,Khóa học
+"US.10 — Tạo bài kiểm tra (Quiz) gắn với khóa học, đặt hạn nộp/thời gian làm bài để đánh giá học viên (F.3.1)",Story,"Là Giảng viên, tôi muốn tạo bài kiểm tra (Quiz) gắn với khóa học, đặt hạn nộp/thời gian làm bài để đánh giá học viên (F.3.1)
+
+Module: Bài kiểm tra
+Mã yêu cầu trong tài liệu SEP: US.10",High,8,Sprint 1,bai-kiem-tra,Bài kiểm tra
+US.11 — Thêm câu hỏi trắc nghiệm (MCQ) vào đề kiểm tra để tạo nội dung đánh giá (F.3.2 – Factory Method),Story,"Là Giảng viên, tôi muốn thêm câu hỏi trắc nghiệm (MCQ) vào đề kiểm tra để tạo nội dung đánh giá (F.3.2 – Factory Method)
+
+Module: Bài kiểm tra
+Mã yêu cầu trong tài liệu SEP: US.11",High,8,Sprint 1,bai-kiem-tra,Bài kiểm tra
+US.12 — Thêm câu hỏi Đúng/Sai vào đề kiểm tra để đa dạng hóa câu hỏi (F.3.3 – Factory Method),Story,"Là Giảng viên, tôi muốn thêm câu hỏi Đúng/Sai vào đề kiểm tra để đa dạng hóa câu hỏi (F.3.3 – Factory Method)
+
+Module: Bài kiểm tra
+Mã yêu cầu trong tài liệu SEP: US.12",High,5,Sprint 1,bai-kiem-tra,Bài kiểm tra
+"US.13 — Xóa câu hỏi hoặc xóa cả bài kiểm tra không còn sử dụng để giữ đề thi gọn gàng (F.3.4, F.3.5)",Story,"Là Giảng viên, tôi muốn xóa câu hỏi hoặc xóa cả bài kiểm tra không còn sử dụng để giữ đề thi gọn gàng (F.3.4, F.3.5)
+
+Module: Bài kiểm tra
+Mã yêu cầu trong tài liệu SEP: US.13",Low,3,Sprint 1,bai-kiem-tra,Bài kiểm tra
+US.14 — Bắt đầu làm bài kiểm tra để kiểm tra kiến thức của mình (F.3.6),Story,"Là Học viên đã đăng ký khóa học, tôi muốn bắt đầu làm bài kiểm tra để kiểm tra kiến thức của mình (F.3.6)
+
+Module: Bài kiểm tra
+Mã yêu cầu trong tài liệu SEP: US.14",High,8,Sprint 1,bai-kiem-tra,Bài kiểm tra
+US.15 — Nộp bài kiểm tra để được hệ thống chấm điểm tự động (F.3.7 – Template Method + Strategy),Story,"Là Học viên đang làm bài, tôi muốn nộp bài kiểm tra để được hệ thống chấm điểm tự động (F.3.7 – Template Method + Strategy)
+
+Module: Bài kiểm tra
+Mã yêu cầu trong tài liệu SEP: US.15",High,13,Sprint 1,bai-kiem-tra,Bài kiểm tra
+US.16 — Xem kết quả (điểm và đáp án đúng/sai từng câu) để biết mình làm đúng bao nhiêu (F.3.8),Story,"Là Học viên đã nộp bài, tôi muốn xem kết quả (điểm và đáp án đúng/sai từng câu) để biết mình làm đúng bao nhiêu (F.3.8)
+
+Module: Bài kiểm tra
+Mã yêu cầu trong tài liệu SEP: US.16",High,5,Sprint 1,bai-kiem-tra,Bài kiểm tra
+US.17 — Xem % bài giảng đã hoàn thành và điểm quiz theo từng khóa học để theo dõi tiến độ học tập của mình (F.4.1),Story,"Là Học viên, tôi muốn xem % bài giảng đã hoàn thành và điểm quiz theo từng khóa học để theo dõi tiến độ học tập của mình (F.4.1)
+
+Module: Tiến độ & Thông báo
+Mã yêu cầu trong tài liệu SEP: US.17",High,8,Sprint 1,tien-do-thong-bao,Tiến độ & Thông báo
+US.18 — Nhận thông báo khi có bài giảng mới hoặc bài kiểm tra sắp đến hạn để không bỏ lỡ (F.4.2 – Observer),Story,"Là người dùng, tôi muốn nhận thông báo khi có bài giảng mới hoặc bài kiểm tra sắp đến hạn để không bỏ lỡ (F.4.2 – Observer)
+
+Module: Tiến độ & Thông báo
+Mã yêu cầu trong tài liệu SEP: US.18",Medium,8,Sprint 1,tien-do-thong-bao,Tiến độ & Thông báo
+US.19 — Xem danh sách danh mục khóa học để lọc tìm kiếm theo lĩnh vực (F.5.1),Story,"Là người dùng bất kỳ (kể cả khách), tôi muốn xem danh sách danh mục khóa học để lọc tìm kiếm theo lĩnh vực (F.5.1)
+
+Module: Danh mục
+Mã yêu cầu trong tài liệu SEP: US.19",Medium,3,Sprint 1,danh-muc,Danh mục
+"US.20 — Thêm, sửa, xóa danh mục khóa học để tổ chức cơ cấu khóa học hợp lý (F.5.2, F.5.3, F.5.4 – BR.06)",Story,"Là Quản trị viên, tôi muốn thêm, sửa, xóa danh mục khóa học để tổ chức cơ cấu khóa học hợp lý (F.5.2, F.5.3, F.5.4 – BR.06)
+
+Module: Danh mục
+Mã yêu cầu trong tài liệu SEP: US.20",High,8,Sprint 1,danh-muc,Danh mục
+"US.21 — Xem thư viện đề thi TOEIC và chi tiết từng đề (các part, số câu, dạng bài)",Story,"Là Học viên, tôi muốn xem thư viện đề thi TOEIC và chi tiết từng đề (các part, số câu, dạng bài) để chọn đề phù hợp với mục tiêu luyện tập (F.6.1, F.6.2)
+
+Module: Luyện thi TOEIC
+Mã yêu cầu trong tài liệu SEP: US.21",High,5,Sprint 3,luyen-thi-toeic,Luyện thi TOEIC
+US.22 — Luyện tập theo một hoặc nhiều part và tự chọn giới hạn thời gian để tập trung vào phần mình còn yếu (F.6.3),Story,"Là Học viên, tôi muốn luyện tập theo một hoặc nhiều part và tự chọn giới hạn thời gian để tập trung vào phần mình còn yếu (F.6.3)
+
+Module: Luyện thi TOEIC
+Mã yêu cầu trong tài liệu SEP: US.22",High,8,Sprint 3,luyen-thi-toeic,Luyện thi TOEIC
+US.23 — Làm full test 7 part trong 120 phút để làm quen với áp lực thời gian như thi thật (F.6.4),Story,"Là Học viên, tôi muốn làm full test 7 part trong 120 phút để làm quen với áp lực thời gian như thi thật (F.6.4)
+
+Module: Luyện thi TOEIC
+Mã yêu cầu trong tài liệu SEP: US.23",High,8,Sprint 3,luyen-thi-toeic,Luyện thi TOEIC
+US.24 — Nghe audio của Part 1-4 ngay trong lúc làm bài để luyện phần Listening (F.6.8),Story,"Là Học viên, tôi muốn nghe audio của Part 1-4 ngay trong lúc làm bài để luyện phần Listening (F.6.8)
+
+Module: Luyện thi TOEIC
+Mã yêu cầu trong tài liệu SEP: US.24",High,5,Sprint 3,luyen-thi-toeic,Luyện thi TOEIC
+"US.25 — Được chấm tự động, quy đổi sang thang điểm 990 và xem phân tích đúng/sai theo part, dạng bài",Story,"Là Học viên, tôi muốn được chấm tự động, quy đổi sang thang điểm 990 và xem phân tích đúng/sai theo part, dạng bài để biết trình độ hiện tại (F.6.5, F.6.6)
+
+Module: Luyện thi TOEIC
+Mã yêu cầu trong tài liệu SEP: US.25",High,13,Sprint 3,luyen-thi-toeic,Luyện thi TOEIC
+US.26 — Xem lịch sử các lượt làm đề kèm điểm quy đổi để theo dõi sự tiến bộ của mình (F.6.7),Story,"Là Học viên, tôi muốn xem lịch sử các lượt làm đề kèm điểm quy đổi để theo dõi sự tiến bộ của mình (F.6.7)
+
+Module: Luyện thi TOEIC
+Mã yêu cầu trong tài liệu SEP: US.26",Medium,3,Sprint 3,luyen-thi-toeic,Luyện thi TOEIC
+"US.27 — Soạn đề TOEIC và thêm câu hỏi theo cấu trúc 7 part (ảnh, audio, đoạn văn dùng chung)",Story,"Là Giảng viên, tôi muốn soạn đề TOEIC và thêm câu hỏi theo cấu trúc 7 part (ảnh, audio, đoạn văn dùng chung) để có đề cho học viên luyện tập (F.6.9)
+
+Module: Luyện thi TOEIC
+Mã yêu cầu trong tài liệu SEP: US.27",High,13,Sprint 3,luyen-thi-toeic,Luyện thi TOEIC
+"US.28 — Xem danh sách list từ vựng và chi tiết từng list (phiên âm, nghĩa, ví dụ, trạng thái ghi nhớ)",Story,"Là Học viên, tôi muốn xem danh sách list từ vựng và chi tiết từng list (phiên âm, nghĩa, ví dụ, trạng thái ghi nhớ) để biết mình đã thuộc những từ nào (F.7.1, F.7.2)
+
+Module: Từ vựng & Flashcards
+Mã yêu cầu trong tài liệu SEP: US.28",High,5,Sprint 4,tu-vung-flashcards,Từ vựng & Flashcards
+US.29 — Luyện từ bằng Flashcards và tự đánh giá đã nhớ hay chưa để ghi nhớ từ nhanh hơn (F.7.3),Story,"Là Học viên, tôi muốn luyện từ bằng Flashcards và tự đánh giá đã nhớ hay chưa để ghi nhớ từ nhanh hơn (F.7.3)
+
+Module: Từ vựng & Flashcards
+Mã yêu cầu trong tài liệu SEP: US.29",High,5,Sprint 4,tu-vung-flashcards,Từ vựng & Flashcards
+"US.30 — Luyện từ bằng Trắc nghiệm, Tìm cặp và Điền từ",Story,"Là Học viên, tôi muốn luyện từ bằng Trắc nghiệm, Tìm cặp và Điền từ để ôn cùng một list theo nhiều cách khác nhau (F.7.4, F.7.5, F.7.6)
+
+Module: Từ vựng & Flashcards
+Mã yêu cầu trong tài liệu SEP: US.30",Medium,8,Sprint 4,tu-vung-flashcards,Từ vựng & Flashcards
+US.31 — Hệ thống nhắc ôn các từ đến hạn theo lịch lặp lại ngắt quãng để nhớ từ lâu hơn (F.7.7),Story,"Là Học viên, tôi muốn hệ thống nhắc ôn các từ đến hạn theo lịch lặp lại ngắt quãng để nhớ từ lâu hơn (F.7.7)
+
+Module: Từ vựng & Flashcards
+Mã yêu cầu trong tài liệu SEP: US.31",High,8,Sprint 4,tu-vung-flashcards,Từ vựng & Flashcards
+US.32 — Xem danh sách bài chép chính tả kèm cấp độ và tiến độ của mình để chọn bài phù hợp (F.8.1),Story,"Là Học viên, tôi muốn xem danh sách bài chép chính tả kèm cấp độ và tiến độ của mình để chọn bài phù hợp (F.8.1)
+
+Module: Nghe chép chính tả
+Mã yêu cầu trong tài liệu SEP: US.32",High,3,Sprint 5,nghe-chep-chinh-ta,Nghe chép chính tả
+US.33 — Nghe từng câu với tốc độ tùy chỉnh và nghe lại bằng phím tắt để bắt âm dễ hơn (F.8.2),Story,"Là Học viên, tôi muốn nghe từng câu với tốc độ tùy chỉnh và nghe lại bằng phím tắt để bắt âm dễ hơn (F.8.2)
+
+Module: Nghe chép chính tả
+Mã yêu cầu trong tài liệu SEP: US.33",High,5,Sprint 5,nghe-chep-chinh-ta,Nghe chép chính tả
+US.34 — Gõ lại câu vừa nghe và được chấm từng từ (đúng/sai/thiếu/thừa) để biết mình nghe sai ở đâu (F.8.3),Story,"Là Học viên, tôi muốn gõ lại câu vừa nghe và được chấm từng từ (đúng/sai/thiếu/thừa) để biết mình nghe sai ở đâu (F.8.3)
+
+Module: Nghe chép chính tả
+Mã yêu cầu trong tài liệu SEP: US.34",High,8,Sprint 5,nghe-chep-chinh-ta,Nghe chép chính tả
+"US.35 — Xem đáp án và bản dịch khi không nghe được, đồng thời được lưu độ chính xác tốt nhất của từng câu",Story,"Là Học viên, tôi muốn xem đáp án và bản dịch khi không nghe được, đồng thời được lưu độ chính xác tốt nhất của từng câu để theo dõi tiến độ (F.8.4, F.8.5)
+
+Module: Nghe chép chính tả
+Mã yêu cầu trong tài liệu SEP: US.35",Medium,5,Sprint 5,nghe-chep-chinh-ta,Nghe chép chính tả

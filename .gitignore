@@ -1,0 +1,18 @@
+node_modules/
+tools/
+venv/
+.env
+mongodb-data/
+dist/
+*.log
+D--MiniLMS/
+
+SEP_NoiDung_Mau_PhongKhamChucTu/
+SEP_NoiDung_Mau_PhongKhamChucTu.rar
+
+# Bản đóng gói tài liệu để nộp bài — bản gốc nằm trong docs/
+SEP_Nhom8_Mini-LMS/
+*.rar
+*.zip
+.vs/
+.claude/

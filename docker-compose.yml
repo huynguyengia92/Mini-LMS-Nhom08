@@ -1,0 +1,37 @@
+# Chạy toàn bộ Mini-LMS bằng một lệnh:  docker compose up --build
+# Mở http://localhost:5173 — dữ liệu mẫu được nạp tự động ở lần chạy đầu.
+
+services:
+  mongo:
+    image: mongo:8
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping')"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  backend:
+    build: ./backend
+    environment:
+      PORT: 4000
+      MONGO_URI: mongodb://mongo:27017/mini_lms
+      # Khóa mặc định chỉ để chạy thử trên máy; khi đưa lên mạng phải đặt biến JWT_SECRET riêng
+      JWT_SECRET: ${JWT_SECRET:-mini-lms-khoa-demo-chi-dung-tren-may}
+      CORS_ORIGIN: http://localhost:5173
+    ports:
+      - "4000:4000"
+    depends_on:
+      mongo:
+        condition: service_healthy
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+volumes:
+  mongo-data:
